@@ -7,6 +7,7 @@ class Book(models.Model):
     author = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
+    cover_image = models.ImageField(upload_to='cover_images/', blank=True)
 
     def __str__(self):
         return f'{self.title} --> {self.author}'
